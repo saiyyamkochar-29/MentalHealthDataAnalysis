@@ -1,5 +1,4 @@
 import pandas as pd
-
 def clean_data(df):
     """
     Cleans the DataFrame by handling missing values, correcting data types, and standardizing categorical columns.
@@ -62,7 +61,7 @@ def clean_data(df):
                     'Femail' : 'Female',
                     'Cis female' : 'Female'
                 })
-                # Replace any Gender values not specifically handled with 'Other' for participant data privacy and ease of visualisation
+                # Replace any Gender values not specifically handled already for participant data privacy and ease of visualisation
                 df[column] = df[column].apply(lambda x: x if x in ['Male', 'Female'] else 'Other')
         else:
             print(f"'{column}' column is not present in the dataset")

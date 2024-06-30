@@ -12,10 +12,11 @@ cleaned_data = clean_data(df)
 # Create, connect to and populate the database
 create_database(cleaned_data)
 
-# Step 4: Query the database AS REQUIRED (changeable)
+# Query the database AS REQUIRED using SQL (changeable)
 query = '''
-SELECT *
+SELECT Age, Country
 FROM mental_health_survey 
+WHERE Country = "United States"
 '''
 result_df = query_database(query)
 print(result_df)
