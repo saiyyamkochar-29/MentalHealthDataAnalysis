@@ -21,5 +21,5 @@ WHERE Country = "United States"
 result_df = query_database(query)
 print(result_df)
 
-# Step 5: Visualize the data using matplotlib for easier understanding of the data
+# Visualize the data using matplotlib for easier understanding of the data
 plot_data(cleaned_data)
